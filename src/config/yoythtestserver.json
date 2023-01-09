@@ -1,0 +1,32 @@
+{
+    "stream": {
+        "streamId": "yoythtestserver",
+        "streamClass": "AController",
+        "streamConfig": {
+            "log": 30,
+            "streams": [
+                {
+                    "streamId": "wsserver",
+                    "streamClass": "WsServer",
+                    "streamConfig": {
+                        "autoStart": true,
+                        "port": "WEBSOCKET_PORT",
+                        "allowed_proxy_servers": ["yoythtestserver"],
+                        "proxy_login_type": "proxy.login"
+                    }
+                }
+            ],
+            "dispatcherMessages": [
+                {
+                    "type": "proxy.*",
+                    "streams": [
+                        {
+                            "streamId": "wsserver"
+                        }
+                    ]
+                }
+            ],
+            "defaults": {}
+        }
+    }
+}

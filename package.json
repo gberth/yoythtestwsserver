@@ -1,0 +1,59 @@
+{
+  "name": "yoythtestserver",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "author": {
+    "name": "Gunnar Berthelsen",
+    "email": "gunnar.berthelsen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gberth@github.com:gberth/yoythtestserver.git"
+  },
+  "description": "proxy",
+  "dependencies": {
+    "@types/convict": "^6.1.1",
+    "@types/lodash": "^4.14.191",
+    "@types/q": "^1.5.5",
+    "@types/restify": "^8.5.5",
+    "@types/underscore": "^1.11.4",
+    "@types/uuid": "^9.0.0",
+    "@types/ws": "^8.5.4",
+    "commander": "^9.4.1",
+    "convict": "^6.2.3",
+    "copy": "^0.0.1",
+    "jayson": "^4.0.0",
+    "lodash": "^4.17.21",
+    "merge": "^2.1.1",
+    "moment": "^2.29.4",
+    "q": "^1.5.1",
+    "restify": "^10.0.0",
+    "restify-clients": "^4.2.0",
+    "underscore": "^1.13.6",
+    "url": "^0.11.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.11.0",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": "19.x.x"
+  },  
+
+  "scripts": {
+    "start": "ASERAAPPL=yoyttestserver ASERACONFIG=./src/config/yoythtestserver.json APPSTREAMS=../bstreams.js WEBSOCKET_PORT=8001 LOG_PRETTY_PRINT=true node dist/src/index.js",
+    "postinstall": "tsc -p .",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -p -w ."
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
