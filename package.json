@@ -45,6 +45,7 @@
     "start": "ASERAAPPL=yoyttestserver ASERACONFIG=./src/config/yoythtestserver.json APPSTREAMS=../bstreams.js WEBSOCKET_PORT=8001 LOG_PRETTY_PRINT=true node dist/src/index.js",
     "postinstall": "tsc -p .",
     "vercel-build": "tsc -p .",    
+    "build": "tsc -p .",    
     "watch-node": "nodemon dist/index.js",
     "watch-ts": "tsc -p -w ."
   },
